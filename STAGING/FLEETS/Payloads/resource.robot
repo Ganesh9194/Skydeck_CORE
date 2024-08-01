@@ -44,8 +44,7 @@ Provide login credentials
         Click Button    //button[@name='submit']
         Set Browser Implicit Wait    10
 
-Zoom In
-    Execute JavaScript    document.body.style.zoom = "1"
+
 
 Zoom Out
     Execute Javascript    document.body.style.zoom = "0.75"
