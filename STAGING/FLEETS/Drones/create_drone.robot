@@ -7,7 +7,7 @@ Test Template    create drones
 
 *** Test Cases ***    
 create Drone
-    [Tags]    REGRESSION    SMOKE
+    [Tags]    REGRESSION
 
 *** Keywords ***
 create drones
