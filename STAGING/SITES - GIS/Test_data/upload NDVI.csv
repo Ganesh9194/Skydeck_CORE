@@ -1,0 +1,2 @@
+*** Test Cases ***,${sitenames},${snapshot_date},${upload document path}
+Upload NDVI,Site-2,2024/01/10,D:/Test data/Data GIS/Files/NDVI/13JAN22_BAYER_POC_BANGALORE_NDVI.tif

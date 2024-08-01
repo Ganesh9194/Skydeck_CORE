@@ -1,0 +1,2 @@
+*** Test Cases ***,${sitegroupnames},${location}
+Create Sitegroup,SG-1234,kormangala

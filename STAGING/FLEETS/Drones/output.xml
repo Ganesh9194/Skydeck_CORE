@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240104 16:01:15.492" rpa="false" schemaversion="4">
+<suite id="s1" name="Drones" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones">
+<suite id="s1-s1" name="Create Drone" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\create_drone.robot">
+<test id="s1-s1-t1" name="1st drone is created" line="9">
+<kw name="create drones">
+<arg>drone-123</arg>
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:01:15.930" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:01:15.930" endtime="20240104 16:01:18.420"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:01:18.421" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:01:18.421" endtime="20240104 16:01:20.298"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:01:20.299" endtime="20240104 16:01:20.430"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:20.431" endtime="20240104 16:01:20.432"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:15.930" endtime="20240104 16:01:20.432"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:20.433" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:01:20.432" endtime="20240104 16:01:21.518"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:21.519" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:01:21.563" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:01:21.684" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:01:21.518" endtime="20240104 16:01:21.685"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:21.687" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:01:21.685" endtime="20240104 16:01:21.785"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:21.786" endtime="20240104 16:01:21.787"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:20.432" endtime="20240104 16:01:21.787"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:21.788" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:01:21.788" endtime="20240104 16:01:26.963"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:21.788" endtime="20240104 16:01:26.963"/>
+</kw>
+<kw name="click on create button" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:26.967" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
+<status status="PASS" starttime="20240104 16:01:26.964" endtime="20240104 16:01:27.054"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:26.964" endtime="20240104 16:01:27.054"/>
+</kw>
+<kw name="click on new drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[normalize-space()='new drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.055" level="INFO">Clicking element '//span[normalize-space()='new drone']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.055" endtime="20240104 16:01:27.104"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:27.054" endtime="20240104 16:01:27.104"/>
+</kw>
+<kw name="Enter drone name" library="resource">
+<arg>${dronenames}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone name']</arg>
+<arg>${dronenames}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.105" level="INFO">Typing text 'drone-123' into text field '//input[@placeholder='Enter drone name']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.104" endtime="20240104 16:01:27.467"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:27.104" endtime="20240104 16:01:27.468"/>
+</kw>
+<kw name="Enter drone UUIN" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone UIN']</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.468" level="INFO">Typing text '12345' into text field '//input[@placeholder='Enter drone UIN']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.468" endtime="20240104 16:01:27.584"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:27.468" endtime="20240104 16:01:27.584"/>
+</kw>
+<kw name="select drone type" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='SelectionList__header-text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.586" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.584" endtime="20240104 16:01:27.647"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[normalize-space()='A200']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.647" level="INFO">Clicking element '//button[normalize-space()='A200']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.647" endtime="20240104 16:01:27.701"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:27.584" endtime="20240104 16:01:27.701"/>
+</kw>
+<kw name="Save drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[normalize-space()='Save Drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:27.702" level="INFO">Clicking element '//div[normalize-space()='Save Drone']'.</msg>
+<status status="PASS" starttime="20240104 16:01:27.702" endtime="20240104 16:01:27.760"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:27.701" endtime="20240104 16:01:27.760"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240104 16:01:27.760" endtime="20240104 16:01:30.063"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:15.929" endtime="20240104 16:01:30.063"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:15.928" endtime="20240104 16:01:30.064"/>
+</test>
+<doc>This suite is to create drones</doc>
+<status status="PASS" starttime="20240104 16:01:15.528" endtime="20240104 16:01:30.065"/>
+</suite>
+<suite id="s1-s2" name="Delete Drone" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\delete_drone.robot">
+<test id="s1-s2-t1" name="Drone is deleted" line="9">
+<kw name="delete drones">
+<arg>Drone-R</arg>
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:01:30.108" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:01:30.107" endtime="20240104 16:01:31.694"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:01:31.694" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:01:31.694" endtime="20240104 16:01:33.314"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:01:33.315" endtime="20240104 16:01:33.462"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:33.462" endtime="20240104 16:01:33.465"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:30.107" endtime="20240104 16:01:33.465"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:33.468" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:01:33.465" endtime="20240104 16:01:34.477"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:34.478" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:01:34.518" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:01:34.586" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:01:34.478" endtime="20240104 16:01:34.586"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:34.587" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:01:34.586" endtime="20240104 16:01:34.663"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:34.664" endtime="20240104 16:01:34.665"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:33.465" endtime="20240104 16:01:34.665"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:34.665" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:01:34.665" endtime="20240104 16:01:39.269"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:34.665" endtime="20240104 16:01:39.269"/>
+</kw>
+<kw name="Click on Drone option in Fleets page" library="resource">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//div[@class='Card TeamStatusCard'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240104 16:01:39.270" level="INFO">Simulating Mouse Over on element '(//div[@class='Card TeamStatusCard'])[2]'.</msg>
+<status status="PASS" starttime="20240104 16:01:39.270" endtime="20240104 16:01:39.548"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:39.549" level="INFO">Clicking element '//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]'.</msg>
+<status status="PASS" starttime="20240104 16:01:39.548" endtime="20240104 16:01:39.608"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:39.269" endtime="20240104 16:01:39.608"/>
+</kw>
+<kw name="Drone to be Deleted" library="resource">
+<arg>${dronenames}</arg>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${dronenames}</var>
+<arg>//tbody/tr/td[2]/a/button</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20240104 16:01:40.599" level="INFO">${dronenames} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e6706f5796c1d0736369a8ab8987d3b1", element="2241AB08E82B4E3F2E1EA78A19AD3DA8_element_65")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement...</msg>
+<status status="PASS" starttime="20240104 16:01:39.609" endtime="20240104 16:01:40.599"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240104 16:01:40.599" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20240104 16:01:40.599" endtime="20240104 16:01:40.599"/>
+</kw>
+<for flavor="IN">
+<var>${title}</var>
+<value>@{dronenames}</value>
+<iter>
+<var name="${title}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e6706f5796c1d0736369a8ab8987d3b1", element="2241AB08E82B4E3F2E1EA78A19AD3DA8_element_65")&gt;</var>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${dronename}'=='${title.text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240104 16:01:40.600" endtime="20240104 16:01:40.617"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240104 16:01:40.617" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20240104 16:01:40.617" endtime="20240104 16:01:40.617"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:40.600" endtime="20240104 16:01:40.617"/>
+</iter>
+<iter>
+<var name="${title}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e6706f5796c1d0736369a8ab8987d3b1", element="2241AB08E82B4E3F2E1EA78A19AD3DA8_element_66")&gt;</var>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${dronename}'=='${title.text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240104 16:01:40.617" endtime="20240104 16:01:40.624"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240104 16:01:40.624" level="INFO">${index} = 3</msg>
+<status status="PASS" starttime="20240104 16:01:40.624" endtime="20240104 16:01:40.624"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:40.617" endtime="20240104 16:01:40.624"/>
+</iter>
+<iter>
+<var name="${title}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e6706f5796c1d0736369a8ab8987d3b1", element="2241AB08E82B4E3F2E1EA78A19AD3DA8_element_67")&gt;</var>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${dronename}'=='${title.text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20240104 16:01:40.625" endtime="20240104 16:01:40.633"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240104 16:01:40.633" level="INFO">${index} = 4</msg>
+<status status="PASS" starttime="20240104 16:01:40.633" endtime="20240104 16:01:40.633"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:40.625" endtime="20240104 16:01:40.633"/>
+</iter>
+<iter>
+<var name="${title}">&lt;selenium.webdriver.remote.webelement.WebElement (session="e6706f5796c1d0736369a8ab8987d3b1", element="2241AB08E82B4E3F2E1EA78A19AD3DA8_element_68")&gt;</var>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${dronename}'=='${title.text}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20240104 16:01:40.640" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240104 16:01:40.633" endtime="20240104 16:01:40.640"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240104 16:01:40.640" endtime="20240104 16:01:40.640"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:40.633" endtime="20240104 16:01:40.640"/>
+</iter>
+<status status="PASS" starttime="20240104 16:01:40.600" endtime="20240104 16:01:40.640"/>
+</for>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//tbody/tr[${index}]/td[6]/div</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240104 16:01:40.640" endtime="20240104 16:01:40.909"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${dronestatus}</var>
+<arg>//tbody/tr[${index}]/td[6]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:40.935" level="INFO">${dronestatus} = Available</msg>
+<status status="PASS" starttime="20240104 16:01:40.909" endtime="20240104 16:01:40.935"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${dronestatus}&quot;==&quot;${assigned}&quot;">
+<kw name="Log" library="BuiltIn">
+<arg>Drone cannot be deleted when it is assigned</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240104 16:01:40.935" endtime="20240104 16:01:40.935"/>
+</kw>
+<status status="NOT RUN" starttime="20240104 16:01:40.935" endtime="20240104 16:01:40.936"/>
+</branch>
+<branch type="ELSE">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//tr[${index}]/td[7]/div/button/div/i</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240104 16:01:40.936" endtime="20240104 16:01:41.222"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//tr[${index}]/td[7]/div/button/div/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:41.223" level="INFO">Clicking element '//tr[4]/td[7]/div/button/div/i'.</msg>
+<status status="PASS" starttime="20240104 16:01:41.222" endtime="20240104 16:01:41.258"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[normalize-space()='delete']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:41.258" level="INFO">Clicking element '//span[normalize-space()='delete']'.</msg>
+<status status="PASS" starttime="20240104 16:01:41.258" endtime="20240104 16:01:41.294"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[normalize-space()='Delete']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:41.294" level="INFO">Clicking element '//div[normalize-space()='Delete']'.</msg>
+<status status="PASS" starttime="20240104 16:01:41.294" endtime="20240104 16:01:41.338"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:40.936" endtime="20240104 16:01:41.338"/>
+</branch>
+<status status="PASS" starttime="20240104 16:01:40.935" endtime="20240104 16:01:41.338"/>
+</if>
+<status status="PASS" starttime="20240104 16:01:39.608" endtime="20240104 16:01:41.338"/>
+</kw>
+<kw name="Take screenshot" library="resource">
+<arg>d.png</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>D:\Automation screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240104 16:01:41.338" endtime="20240104 16:01:41.339"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename= ${imagename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240104 16:01:41.488" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="file:///D:/Automation%20screenshots/%20d.png"&gt;&lt;img src="file:///D:/Automation%20screenshots/%20d.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240104 16:01:41.339" endtime="20240104 16:01:41.488"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:41.338" endtime="20240104 16:01:41.489"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240104 16:01:41.489" endtime="20240104 16:01:43.829"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:30.107" endtime="20240104 16:01:43.829"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:30.105" endtime="20240104 16:01:43.829"/>
+</test>
+<doc>This suite is to delete drones</doc>
+<status status="PASS" starttime="20240104 16:01:30.066" endtime="20240104 16:01:43.830"/>
+</suite>
+<suite id="s1-s3" name="Drone Name Field Validation" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\drone_name_field_validation.robot">
+<test id="s1-s3-t1" name="Error message should be displayed if the length of drone name is less than 5 chratacters" line="8">
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:01:43.855" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:01:43.855" endtime="20240104 16:01:45.275"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:01:45.276" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:01:45.275" endtime="20240104 16:01:46.913"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:01:46.914" endtime="20240104 16:01:47.036"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:47.036" endtime="20240104 16:01:47.043"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:43.855" endtime="20240104 16:01:47.043"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:47.046" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:01:47.044" endtime="20240104 16:01:47.994"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:47.995" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:01:48.032" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:01:48.094" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:01:47.994" endtime="20240104 16:01:48.094"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:48.095" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:01:48.095" endtime="20240104 16:01:48.165"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:48.165" endtime="20240104 16:01:48.166"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:47.043" endtime="20240104 16:01:48.166"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:48.167" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:01:48.166" endtime="20240104 16:01:51.733"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:48.166" endtime="20240104 16:01:51.733"/>
+</kw>
+<kw name="click on create button" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:51.734" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
+<status status="PASS" starttime="20240104 16:01:51.733" endtime="20240104 16:01:51.774"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:51.733" endtime="20240104 16:01:51.774"/>
+</kw>
+<kw name="click on new drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[normalize-space()='new drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:51.775" level="INFO">Clicking element '//span[normalize-space()='new drone']'.</msg>
+<status status="PASS" starttime="20240104 16:01:51.775" endtime="20240104 16:01:51.815"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:51.774" endtime="20240104 16:01:51.815"/>
+</kw>
+<kw name="Enter drone name" library="resource">
+<arg>Dron</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone name']</arg>
+<arg>${dronenames}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:51.816" level="INFO">Typing text 'Dron' into text field '//input[@placeholder='Enter drone name']'.</msg>
+<status status="PASS" starttime="20240104 16:01:51.815" endtime="20240104 16:01:52.096"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:51.815" endtime="20240104 16:01:52.096"/>
+</kw>
+<kw name="Enter drone UUIN" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone UIN']</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:52.097" level="INFO">Typing text '12345' into text field '//input[@placeholder='Enter drone UIN']'.</msg>
+<status status="PASS" starttime="20240104 16:01:52.097" endtime="20240104 16:01:52.168"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:52.096" endtime="20240104 16:01:52.168"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[@class='ErrorMessage']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240104 16:01:52.168" endtime="20240104 16:01:52.210"/>
+</kw>
+<kw name="Take screenshot" library="resource">
+<arg>drone.png</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>D:\Automation screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240104 16:01:52.211" endtime="20240104 16:01:52.211"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename= ${imagename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240104 16:01:52.359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="file:///D:/Automation%20screenshots/%20drone.png"&gt;&lt;img src="file:///D:/Automation%20screenshots/%20drone.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240104 16:01:52.211" endtime="20240104 16:01:52.360"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:52.211" endtime="20240104 16:01:52.360"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240104 16:01:52.360" endtime="20240104 16:01:54.609"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:43.854" endtime="20240104 16:01:54.610"/>
+</test>
+<doc>This suite is used to validate Drones functionality in Fleets module</doc>
+<status status="PASS" starttime="20240104 16:01:43.833" endtime="20240104 16:01:54.611"/>
+</suite>
+<suite id="s1-s4" name="Edit Drone" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\edit_drone.robot">
+<test id="s1-s4-t1" name="To Edit Drone" line="7">
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:01:54.637" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:01:54.636" endtime="20240104 16:01:56.099"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:01:56.100" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:01:56.100" endtime="20240104 16:01:56.266"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:01:56.266" endtime="20240104 16:01:58.720"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:01:58.720" endtime="20240104 16:01:58.726"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:54.636" endtime="20240104 16:01:58.726"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:01:58.727" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:01:58.726" endtime="20240104 16:02:00.231"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:00.232" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:02:00.268" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:02:00.336" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:02:00.232" endtime="20240104 16:02:00.336"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:00.337" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:02:00.337" endtime="20240104 16:02:00.407"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:02:00.407" endtime="20240104 16:02:00.408"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:58.726" endtime="20240104 16:02:00.408"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:00.409" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:02:00.408" endtime="20240104 16:02:04.011"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:00.408" endtime="20240104 16:02:04.011"/>
+</kw>
+<kw name="Click on Drone option in Fleets page" library="resource">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//div[@class='Card TeamStatusCard'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240104 16:02:04.012" level="INFO">Simulating Mouse Over on element '(//div[@class='Card TeamStatusCard'])[2]'.</msg>
+<status status="PASS" starttime="20240104 16:02:04.012" endtime="20240104 16:02:04.309"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:04.310" level="INFO">Clicking element '//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]'.</msg>
+<status status="PASS" starttime="20240104 16:02:04.309" endtime="20240104 16:02:04.377"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:04.012" endtime="20240104 16:02:04.377"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//tbody/tr[1]/td[7]/div[1]/button[1]/div[1]/i[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:04.378" level="INFO">Clicking element '//tbody/tr[1]/td[7]/div[1]/button[1]/div[1]/i[1]'.</msg>
+<status status="PASS" starttime="20240104 16:02:04.377" endtime="20240104 16:02:04.815"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//tbody/tr/td/div[@class='Options Options--active']/div[@class='Dropdown Options__dropdown']/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:04.815" level="INFO">Clicking element '//tbody/tr/td/div[@class='Options Options--active']/div[@class='Dropdown Options__dropdown']/div[1]'.</msg>
+<status status="PASS" starttime="20240104 16:02:04.815" endtime="20240104 16:02:04.864"/>
+</kw>
+<kw name="Save drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[normalize-space()='Save Drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:04.865" level="INFO">Clicking element '//div[normalize-space()='Save Drone']'.</msg>
+<status status="PASS" starttime="20240104 16:02:04.864" endtime="20240104 16:02:05.123"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:04.864" endtime="20240104 16:02:05.123"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240104 16:02:05.124" endtime="20240104 16:02:07.517"/>
+</kw>
+<status status="PASS" starttime="20240104 16:01:54.635" endtime="20240104 16:02:07.518"/>
+</test>
+<doc>This suite is used to validate Drones functionality in Fleets module</doc>
+<status status="PASS" starttime="20240104 16:01:54.613" endtime="20240104 16:02:07.519"/>
+</suite>
+<suite id="s1-s5" name="To Verify Duplicate Drones Are Not Created" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\to_verify_duplicate_drones_are_not_created.robot">
+<test id="s1-s5-t1" name="To verify duplicate Drone is not created" line="8">
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:02:07.548" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:02:07.548" endtime="20240104 16:02:08.933"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:02:08.934" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:02:08.933" endtime="20240104 16:02:10.791"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:02:10.792" endtime="20240104 16:02:10.918"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:02:10.919" endtime="20240104 16:02:10.925"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:07.547" endtime="20240104 16:02:10.925"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:10.926" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:02:10.926" endtime="20240104 16:02:11.884"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:11.884" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:02:11.935" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:02:12.018" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:02:11.884" endtime="20240104 16:02:12.018"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:12.018" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:02:12.018" endtime="20240104 16:02:12.102"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:02:12.102" endtime="20240104 16:02:12.104"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:10.925" endtime="20240104 16:02:12.104"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:12.105" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:02:12.105" endtime="20240104 16:02:15.651"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:12.104" endtime="20240104 16:02:15.652"/>
+</kw>
+<kw name="click on create button" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:15.652" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
+<status status="PASS" starttime="20240104 16:02:15.652" endtime="20240104 16:02:15.695"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:15.652" endtime="20240104 16:02:15.695"/>
+</kw>
+<kw name="click on new drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[normalize-space()='new drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:15.696" level="INFO">Clicking element '//span[normalize-space()='new drone']'.</msg>
+<status status="PASS" starttime="20240104 16:02:15.695" endtime="20240104 16:02:15.739"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:15.695" endtime="20240104 16:02:15.739"/>
+</kw>
+<kw name="Enter drone name" library="resource">
+<arg>drone-s</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone name']</arg>
+<arg>${dronenames}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:15.740" level="INFO">Typing text 'drone-s' into text field '//input[@placeholder='Enter drone name']'.</msg>
+<status status="PASS" starttime="20240104 16:02:15.739" endtime="20240104 16:02:16.032"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:15.739" endtime="20240104 16:02:16.032"/>
+</kw>
+<kw name="Enter drone UUIN" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter drone UIN']</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:16.033" level="INFO">Typing text '12345' into text field '//input[@placeholder='Enter drone UIN']'.</msg>
+<status status="PASS" starttime="20240104 16:02:16.032" endtime="20240104 16:02:16.103"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:16.032" endtime="20240104 16:02:16.103"/>
+</kw>
+<kw name="select drone type" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='SelectionList__header-text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:16.104" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
+<status status="PASS" starttime="20240104 16:02:16.104" endtime="20240104 16:02:16.144"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[normalize-space()='A200']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:16.145" level="INFO">Clicking element '//button[normalize-space()='A200']'.</msg>
+<status status="PASS" starttime="20240104 16:02:16.144" endtime="20240104 16:02:16.192"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:16.103" endtime="20240104 16:02:16.192"/>
+</kw>
+<kw name="Save drone" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[normalize-space()='Save Drone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:16.193" level="INFO">Clicking element '//div[normalize-space()='Save Drone']'.</msg>
+<status status="PASS" starttime="20240104 16:02:16.192" endtime="20240104 16:02:16.243"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:16.192" endtime="20240104 16:02:16.243"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>//span[normalize-space()= 'Drone created']</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240104 16:02:16.244" endtime="20240104 16:02:26.287"/>
+</kw>
+<kw name="click on create button" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:26.287" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
+<msg timestamp="20240104 16:02:36.558" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="file:///D:/Automation%20screenshots/selenium-screenshot-2.png"&gt;&lt;img src="file:///D:/Automation%20screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240104 16:02:36.559" level="FAIL">Element with locator '//div[contains(text(),'create')]' not found.</msg>
+<status status="FAIL" starttime="20240104 16:02:26.287" endtime="20240104 16:02:36.571"/>
+</kw>
+<status status="FAIL" starttime="20240104 16:02:26.287" endtime="20240104 16:02:36.571"/>
+</kw>
+<kw name="click on new drone" library="resource">
+<status status="NOT RUN" starttime="20240104 16:02:36.571" endtime="20240104 16:02:36.571"/>
+</kw>
+<kw name="Enter drone name" library="resource">
+<arg>drone-s</arg>
+<status status="NOT RUN" starttime="20240104 16:02:36.571" endtime="20240104 16:02:36.571"/>
+</kw>
+<kw name="Enter drone UUIN" library="resource">
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="select drone type" library="resource">
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="Save drone" library="resource">
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[normalize-space()='Cannot create duplicate entries']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>//span[normalize-space()='Cannot create duplicate entries']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240104 16:02:36.572" endtime="20240104 16:02:36.572"/>
+</kw>
+<status status="FAIL" starttime="20240104 16:02:07.547" endtime="20240104 16:02:36.572">Element with locator '//div[contains(text(),'create')]' not found.</status>
+</test>
+<doc>This suite is used to validate Drones functionality in Fleets module</doc>
+<status status="FAIL" starttime="20240104 16:02:07.520" endtime="20240104 16:02:36.573"/>
+</suite>
+<suite id="s1-s6" name="To View List Of Drones" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\FLEETS\Drones\to_view_list_of_drones.robot">
+<test id="s1-s6-t1" name="To see list of Drones in fleets page" line="7">
+<kw name="open Skydeck application in Chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240104 16:02:36.588" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240104 16:02:36.587" endtime="20240104 16:02:37.968"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240104 16:02:37.969" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/a62137ec-f4c9-4413-b340-412d096cf0e6'</msg>
+<status status="PASS" starttime="20240104 16:02:37.969" endtime="20240104 16:02:39.633"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 16:02:39.633" endtime="20240104 16:02:39.759"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:02:39.759" endtime="20240104 16:02:39.762"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:36.587" endtime="20240104 16:02:39.762"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:39.763" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240104 16:02:39.763" endtime="20240104 16:02:40.743"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:40.744" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240104 16:02:40.781" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240104 16:02:40.854" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240104 16:02:40.743" endtime="20240104 16:02:40.855"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:40.855" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240104 16:02:40.855" endtime="20240104 16:02:40.936"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240104 16:02:40.937" endtime="20240104 16:02:40.938"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:39.762" endtime="20240104 16:02:40.938"/>
+</kw>
+<kw name="Click on Fleets module" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//img[@alt='Fleets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:40.939" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
+<status status="PASS" starttime="20240104 16:02:40.938" endtime="20240104 16:02:45.778"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:40.938" endtime="20240104 16:02:45.778"/>
+</kw>
+<kw name="Click on Drone option in Fleets page" library="resource">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>(//div[@class='Card TeamStatusCard'])[2]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240104 16:02:45.780" level="INFO">Simulating Mouse Over on element '(//div[@class='Card TeamStatusCard'])[2]'.</msg>
+<status status="PASS" starttime="20240104 16:02:45.778" endtime="20240104 16:02:46.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 16:02:46.069" level="INFO">Clicking element '//div[@class='Home__status']//div[2]//div[2]//div[1]//button[1]//div[1]'.</msg>
+<status status="PASS" starttime="20240104 16:02:46.067" endtime="20240104 16:02:46.135"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:45.778" endtime="20240104 16:02:46.135"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240104 16:02:46.135" endtime="20240104 16:02:48.450"/>
+</kw>
+<status status="PASS" starttime="20240104 16:02:36.587" endtime="20240104 16:02:48.450"/>
+</test>
+<doc>This suite is used to validate Drones functionality in Fleets module</doc>
+<status status="PASS" starttime="20240104 16:02:36.574" endtime="20240104 16:02:48.452"/>
+</suite>
+<status status="FAIL" starttime="20240104 16:01:15.494" endtime="20240104 16:02:48.455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Drones">Drones</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Create Drone">Drones.Create Drone</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Delete Drone">Drones.Delete Drone</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Drone Name Field Validation">Drones.Drone Name Field Validation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Edit Drone">Drones.Edit Drone</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s5" name="To Verify Duplicate Drones Are Not Created">Drones.To Verify Duplicate Drones Are Not Created</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="To View List Of Drones">Drones.To View List Of Drones</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

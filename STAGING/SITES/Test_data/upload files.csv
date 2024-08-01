@@ -1,0 +1,2 @@
+*** Test Cases ***,${sitenames},${upload document path}
+Upload files,Site_447,D:/Test data/File vault/SampleDOCFile_500kb.DOC.doc

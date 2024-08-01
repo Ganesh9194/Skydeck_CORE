@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231208 12:45:05.918" rpa="false" schemaversion="4">
+<suite id="s1" name="LOGIN" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\LOGIN">
+<suite id="s1-s1" name="Login" source="C:\Users\Ganesh\PycharmProjects\SKYDECK_AUTOMATION\STAGING\LOGIN\login.robot">
+<test id="s1-s1-t1" name="Invalid username" line="9">
+<kw name="Validate login">
+<arg>ganesh@asteria.co.in</arg>
+<arg>Asteria@123</arg>
+<kw name="open Skydeck application in chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231208 12:45:06.267" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231208 12:45:06.267" endtime="20231208 12:45:08.156"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231208 12:45:08.158" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/39fa3138-f921-4f57-9d8e-3a3af2561c3e'</msg>
+<status status="PASS" starttime="20231208 12:45:08.157" endtime="20231208 12:45:13.299"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:13.300" endtime="20231208 12:45:13.303"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:06.267" endtime="20231208 12:45:13.303"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:13.306" level="INFO">Typing text 'ganesh@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20231208 12:45:13.304" endtime="20231208 12:45:14.222"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:14.226" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20231208 12:45:14.281" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231208 12:45:14.396" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231208 12:45:14.223" endtime="20231208 12:45:14.396"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:14.398" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20231208 12:45:14.396" endtime="20231208 12:45:14.519"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:14.519" endtime="20231208 12:45:14.521"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:13.303" endtime="20231208 12:45:14.521"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:14.521" endtime="20231208 12:45:14.528"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231208 12:45:14.528" endtime="20231208 12:45:16.885"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:06.267" endtime="20231208 12:45:16.885"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:06.266" endtime="20231208 12:45:16.885"/>
+</test>
+<test id="s1-s1-t2" name="Invalid password" line="10">
+<kw name="Validate login">
+<arg>ganesh.l@asteria.co.in</arg>
+<arg>123456</arg>
+<kw name="open Skydeck application in chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231208 12:45:16.889" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231208 12:45:16.888" endtime="20231208 12:45:18.916"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231208 12:45:18.916" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/39fa3138-f921-4f57-9d8e-3a3af2561c3e'</msg>
+<status status="PASS" starttime="20231208 12:45:18.916" endtime="20231208 12:45:24.412"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:24.412" endtime="20231208 12:45:24.414"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:16.888" endtime="20231208 12:45:24.414"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:24.416" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20231208 12:45:24.416" endtime="20231208 12:45:24.645"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:24.646" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20231208 12:45:24.698" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231208 12:45:24.763" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231208 12:45:24.645" endtime="20231208 12:45:24.763"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:24.764" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20231208 12:45:24.763" endtime="20231208 12:45:24.947"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:24.947" endtime="20231208 12:45:24.948"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:24.415" endtime="20231208 12:45:24.948"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:24.949" endtime="20231208 12:45:24.951"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231208 12:45:24.951" endtime="20231208 12:45:27.580"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:16.887" endtime="20231208 12:45:27.580"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:16.886" endtime="20231208 12:45:27.580"/>
+</test>
+<test id="s1-s1-t3" name="Valid credentials" line="11">
+<kw name="Validate login">
+<arg>ganesh.l@asteria.co.in</arg>
+<arg>Asteria@123</arg>
+<kw name="open Skydeck application in chrome browser" library="resource">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=D:/chromedriver-win64 (1)/chromedriver-win64/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20231208 12:45:27.593" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20231208 12:45:27.593" endtime="20231208 12:45:29.193"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${stage_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231208 12:45:29.195" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/39fa3138-f921-4f57-9d8e-3a3af2561c3e'</msg>
+<status status="PASS" starttime="20231208 12:45:29.193" endtime="20231208 12:45:33.965"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:33.965" endtime="20231208 12:45:33.967"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:27.593" endtime="20231208 12:45:33.967"/>
+</kw>
+<kw name="Provide login credentials" library="resource">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='yours@example.com']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:33.969" level="INFO">Typing text 'ganesh.l@asteria.co.in' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20231208 12:45:33.968" endtime="20231208 12:45:34.742"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@placeholder='your password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:34.743" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20231208 12:45:34.783" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231208 12:45:34.862" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231208 12:45:34.742" endtime="20231208 12:45:34.862"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@name='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231208 12:45:34.863" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20231208 12:45:34.862" endtime="20231208 12:45:34.936"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:34.936" endtime="20231208 12:45:34.938"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:33.967" endtime="20231208 12:45:34.938"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231208 12:45:34.938" endtime="20231208 12:45:34.942"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231208 12:45:34.942" endtime="20231208 12:45:37.208"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:27.591" endtime="20231208 12:45:37.208"/>
+</kw>
+<status status="PASS" starttime="20231208 12:45:27.581" endtime="20231208 12:45:37.209"/>
+</test>
+<doc>This suite is used to validate login to skydeck</doc>
+<status status="PASS" starttime="20231208 12:45:05.945" endtime="20231208 12:45:37.210"/>
+</suite>
+<status status="PASS" starttime="20231208 12:45:05.920" endtime="20231208 12:45:37.212"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="LOGIN">LOGIN</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Login">LOGIN.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
