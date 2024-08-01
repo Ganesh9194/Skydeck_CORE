@@ -5,9 +5,9 @@ Library    Collections
 Library    String
 
 *** Variables ***
-${user_name}          vina@treatance.com
+${user_name}          alnisa741@lopvede.com
 ${password}           test@123
-${stage_Url}          https://skydeck-staging.asteria.co.in/ui/dashboard/7d19fbea-7ebd-4d1c-a4be-3fd16044e105
+${stage_Url}          https://skydeck-staging.asteria.co.in/ui/dashboard/e596c680-cefb-4ec5-bf55-920ac3a5e0ad
 ${prod_Url}  
 ${invalid_password}   123456
 ${teamname}           test_team
