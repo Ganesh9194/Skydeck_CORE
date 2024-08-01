@@ -7,7 +7,7 @@ Test Template    delete drones
 
 *** Test Cases ***
 Drone ${dronename} is deleted
-    [Tags]    REGRESSION    SMOKE
+    [Tags]    REGRESSION
 
 *** Keywords ***
 delete drones
