@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 Library    Collections
 Library    DateTime
 Library    String
+Library    DependencyLibrary
 
 *** Variables ***
 ${user_name}          alnisa741@lopvede.com
