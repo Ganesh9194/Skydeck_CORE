@@ -1,2 +1,2 @@
-*** Test Cases ***,${sitenames}
-Create Snapshot,site_553
+*** Test Cases ***,${sitenames},${Sday},${Sdate},${Syear}
+Create Snapshot,site_614,Wednesday,August 7,2024
