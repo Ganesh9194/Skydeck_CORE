@@ -15,7 +15,8 @@ create snapshot
     Open Skydeck Application In Chrome Browser
     Provide Login Credentials
     Click On Sites Module
-    Click On Sites Tab
+    #Click On Sites Tab
+    Click Element    //div[normalize-space()='Sites']
     Search For Site    ${sitenames}
     ${page contains} =    Run Keyword And Return Status    Page Should Contain Element    //span[@class='HelperCard__text']
     Run Keyword If    ${page contains}    Click Element    //span[@class='HelperCard__text']

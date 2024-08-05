@@ -17,6 +17,12 @@ ${page contains}
 ${location}
 ${upload document path}
 ${documentname}
+${Sday}
+${Sdate}
+${Syear}
+${Eday}
+${Edate}
+${Eyear}
 
 *** Keywords ***
 open Skydeck application in Chrome browser
@@ -154,13 +160,15 @@ enter snapshot name
 
 select snapshot dates
     Click Element    //input[@placeholder='Select date']
-    Click Element    //td[@aria-label='Saturday, March 23, 2024']
+    Click Element    //td[@aria-label='Wednesday, August 7, 2024']
+    #Click Element    //td[@aria-label='${Sday}, ${Sdate}, ${Syear}']
+
 
 enter snapshot description
     Input Text    //textarea[@placeholder='Enter description']    Testing
 
 select 2D option
-    Click Element    //label[@for='2D Layer']//i[@role='none']
+    Click Element    (//i[@role='none'])[14]
 
 click on create snapshot button
     Click Element    //div[normalize-space()='Create']
