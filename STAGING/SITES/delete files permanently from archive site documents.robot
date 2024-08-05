@@ -17,9 +17,9 @@ delete file permanently from archive site document
     Provide Login Credentials
     Click On Sites Module
     Click On Sites Tab
-    Search For Site    ${sitenames}
-    Click Element    //div[normalize-space()='Site Documents']
-    Click Element    //span[normalize-space()='Archive']
+    #Search For Site    ${sitenames}
+    #Click Element    //div[normalize-space()='Site Documents']
+    Click Element    //div[normalize-space()='Archive']
     Select File To Delete Permanently From Archive Site Document    ${documentname}
     Close Browser
 

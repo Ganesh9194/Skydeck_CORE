@@ -16,7 +16,7 @@ upload file to site document
     Open Skydeck Application In Chrome Browser
     Provide Login Credentials
     Click On Sites Module
-    Click On Sites Tab
+    Click Element    //div[normalize-space()='Sites']
     Search For Site    ${sitenames}
     Upload Document    ${upload document path}
 

@@ -20,7 +20,7 @@ create sites
     Enter Sitename
     Select Site-type
     Enter Site-location    ${location}
-    Click On Demarcation Line
+    Demarcate Using Point
     Save Site
 
 

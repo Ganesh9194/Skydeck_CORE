@@ -15,7 +15,7 @@ archive sites
     Open Skydeck Application In Chrome Browser
     Provide Login Credentials
     Click On Sites Module
-    Click On Sites Tab
+    Click Element    //div[normalize-space()='Sites']
     Search For Site    ${sitenames}
     Archive Site
     Close Browser

@@ -18,7 +18,7 @@ delete snapshot
     Search For Site    ${sitenames}    
     Click Element    //div[normalize-space()='Datasets']
     Click Element    //div[@class='SelectionList__header-text']
-    Click Element  //button[text()='${snapshot_date}']
+    Run Keyword And Ignore Error      //button[text()='${snapshot_date}']
     Click Element    //button[@class='Button']//i[@alt='expand']
     Click Element    //div[normalize-space()='Delete Snapshot']
     Input Text    //input[@type='text']    DELETE SNAPSHOT

@@ -43,7 +43,7 @@ click on sites module
     Click Element    //img[@alt='Sites']
 
 click on sites tab
-    Click Element    //div[normalize-space()='sites']
+    Click Element    //div[normalize-space()='Sites']
 
 click on +create button
     Click Element    //div[contains(text(),'create')]
@@ -57,7 +57,7 @@ Enter sitename
 
 select site-type
     Click Element    //div[contains(text(),'Please select an option')]
-    Click Element    //button[normalize-space()='Pipeline']
+    Click Element    //button[normalize-space()='Agriculture']
 
 enter site-location
     [Arguments]    ${location}
@@ -93,6 +93,11 @@ click on demarcation line
     Mouse Up    //div[@class='ol-layer']//canvas
     Double Click Element       //div[@class='ol-layer']//canvas
     Scroll Element Into View    //button[@type='button']//div[@class='Button__text'][normalize-space()='Save']
+    Click Element    //button[@type='button']//div[@class='Button__text'][normalize-space()='Save']
+
+Demarcate using point
+    Click Element    //i[@alt='circle']
+    Click Element    //div[@class='Map']//div[2]//canvas[1]
     Click Element    //button[@type='button']//div[@class='Button__text'][normalize-space()='Save']
 
 save site
