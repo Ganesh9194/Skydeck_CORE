@@ -51,7 +51,7 @@ Enter sitename
 
 select site-type
     Click Element    //div[contains(text(),'Please select an option')]
-    Click Element    //button[normalize-space()='Pipeline']
+    Click Element    //button[normalize-space()='Agriculture']
 
 enter site-location
     [Arguments]    ${location}
@@ -60,7 +60,7 @@ enter site-location
     Set Selenium Implicit Wait    10
     Click Element    //button[@class='Button Button--active']//i[@alt='search']
     Click Element    //div[@class='Map']//div[1]//span[1]
-    Set Selenium Implicit Wait    300
+    Set Selenium Implicit Wait    800
 
 
 click on demarcation option
@@ -77,6 +77,11 @@ click on demarcation option
     Mouse Out    //div[@class='ol-layer']//canvas
     Mouse Up    //div[@class='ol-layer']//canvas
     Double Click Element    //div[@class='ol-layer']//canvas
+
+Demarcate as point
+    Click Element    //i[@alt='circle']
+    Click Element    //div[@class='Map']//div[2]//canvas[1]
+    Click Element    //button[@type='button']//div[@class='Button__text'][normalize-space()='Save']
 
 click on demarcation line
     Click Element    //i[@alt='line']

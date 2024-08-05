@@ -1,842 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240801 11:11:19.220" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240805 10:29:29.009" rpa="false" schemaversion="4">
 <suite id="s1" name="SkYDECK Stage QA Automation-master" source="D:\SkYDECK_Stage_QA_Automation-master">
 <suite id="s1-s1" name="STAGING" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING">
-<suite id="s1-s1-s1" name="FLEETS" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING\FLEETS">
-<suite id="s1-s1-s1-s1" name="Payloads" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING\FLEETS\Payloads">
-<suite id="s1-s1-s1-s1-s1" name="Create Paylaod" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING\FLEETS\Payloads\create_paylaod.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="create payload" line="9">
-<kw name="create payloads">
+<suite id="s1-s1-s1" name="SITES" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING\SITES">
+<suite id="s1-s1-s1-s1" name="Create Site" source="D:\SkYDECK_Stage_QA_Automation-master\STAGING\SITES\create_site.robot">
+<test id="s1-s1-s1-s1-t1" name="Create sites" line="9">
+<kw name="create sites">
+<arg>India</arg>
 <kw name="open Skydeck application in Chrome browser" library="resource">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>executable_path=D:/chromedriver-win64/chromedriver-win64/chromedriver.exe</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240801 11:11:19.880" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20240801 11:11:19.880" endtime="20240801 11:11:22.295"/>
+<msg timestamp="20240805 10:29:29.642" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240805 10:29:29.641" endtime="20240805 10:29:32.097"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${stage_Url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240801 11:11:22.297" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/7d19fbea-7ebd-4d1c-a4be-3fd16044e105'</msg>
-<status status="PASS" starttime="20240801 11:11:22.295" endtime="20240801 11:11:27.592"/>
+<msg timestamp="20240805 10:29:32.098" level="INFO">Opening url 'https://skydeck-staging.asteria.co.in/ui/dashboard/e596c680-cefb-4ec5-bf55-920ac3a5e0ad'</msg>
+<status status="PASS" starttime="20240805 10:29:32.098" endtime="20240805 10:29:35.468"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240801 11:11:27.592" endtime="20240801 11:11:27.665"/>
+<status status="PASS" starttime="20240805 10:29:35.469" endtime="20240805 10:29:35.548"/>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240801 11:11:27.666" endtime="20240801 11:11:27.673"/>
+<status status="PASS" starttime="20240805 10:29:35.549" endtime="20240805 10:29:35.552"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:19.880" endtime="20240801 11:11:27.673"/>
+<status status="PASS" starttime="20240805 10:29:29.641" endtime="20240805 10:29:35.552"/>
 </kw>
 <kw name="Provide login credentials" library="resource">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@placeholder='yours@example.com']</arg>
 <arg>${user_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:27.677" level="INFO">Typing text 'vina@treatance.com' into text field '//input[@placeholder='yours@example.com']'.</msg>
-<status status="PASS" starttime="20240801 11:11:27.675" endtime="20240801 11:11:28.954"/>
+<msg timestamp="20240805 10:29:35.555" level="INFO">Typing text 'alnisa741@lopvede.com' into text field '//input[@placeholder='yours@example.com']'.</msg>
+<status status="PASS" starttime="20240805 10:29:35.553" endtime="20240805 10:29:36.783"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>//input[@placeholder='your password']</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:28.955" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
-<msg timestamp="20240801 11:11:29.049" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240801 11:11:29.188" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240801 11:11:28.954" endtime="20240801 11:11:29.188"/>
+<msg timestamp="20240805 10:29:36.784" level="INFO">Typing password into text field '//input[@placeholder='your password']'.</msg>
+<msg timestamp="20240805 10:29:36.864" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240805 10:29:37.104" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240805 10:29:36.783" endtime="20240805 10:29:37.104"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@name='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:29.189" level="INFO">Clicking button '//button[@name='submit']'.</msg>
-<status status="PASS" starttime="20240801 11:11:29.188" endtime="20240801 11:11:29.465"/>
+<msg timestamp="20240805 10:29:37.107" level="INFO">Clicking button '//button[@name='submit']'.</msg>
+<status status="PASS" starttime="20240805 10:29:37.106" endtime="20240805 10:29:37.370"/>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <arg>10</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20240801 11:11:29.465" endtime="20240801 11:11:29.467"/>
+<status status="PASS" starttime="20240805 10:29:37.371" endtime="20240805 10:29:37.374"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:27.674" endtime="20240801 11:11:29.467"/>
+<status status="PASS" starttime="20240805 10:29:35.553" endtime="20240805 10:29:37.375"/>
 </kw>
-<kw name="Click on Fleets module" library="resource">
+<kw name="click on sites module" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//img[@alt='Fleets']</arg>
+<arg>//img[@alt='Sites']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:29.469" level="INFO">Clicking element '//img[@alt='Fleets']'.</msg>
-<status status="PASS" starttime="20240801 11:11:29.468" endtime="20240801 11:11:42.414"/>
+<msg timestamp="20240805 10:29:37.376" level="INFO">Clicking element '//img[@alt='Sites']'.</msg>
+<status status="PASS" starttime="20240805 10:29:37.375" endtime="20240805 10:29:43.751"/>
 </kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:42.430" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:42.430" endtime="20240801 11:11:42.430"/>
+<status status="PASS" starttime="20240805 10:29:37.375" endtime="20240805 10:29:43.751"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:42.414" endtime="20240801 11:11:42.430"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:29.467" endtime="20240801 11:11:42.430"/>
-</kw>
-<kw name="click on create button" library="resource">
+<kw name="click on +create button" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//div[contains(text(),'create')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:42.433" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:42.432" endtime="20240801 11:11:42.561"/>
+<msg timestamp="20240805 10:29:43.752" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
+<status status="PASS" starttime="20240805 10:29:43.751" endtime="20240805 10:29:43.913"/>
 </kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:42.570" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:42.570" endtime="20240801 11:11:42.570"/>
+<status status="PASS" starttime="20240805 10:29:43.751" endtime="20240805 10:29:43.913"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:42.562" endtime="20240801 11:11:42.571"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:42.431" endtime="20240801 11:11:42.571"/>
-</kw>
-<kw name="click on new payload" library="resource">
+<kw name="click on new-site button" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
+<arg>//span[normalize-space()='new site']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:42.572" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:42.571" endtime="20240801 11:11:42.752"/>
+<msg timestamp="20240805 10:29:43.915" level="INFO">Clicking element '//span[normalize-space()='new site']'.</msg>
+<status status="PASS" starttime="20240805 10:29:43.914" endtime="20240805 10:29:44.033"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:42.571" endtime="20240801 11:11:42.752"/>
+<status status="PASS" starttime="20240805 10:29:43.913" endtime="20240805 10:29:44.033"/>
 </kw>
-<kw name="Enter payload name" library="resource">
+<kw name="Enter sitename" library="resource">
 <kw name="Generate Random String" library="String">
 <var>${random_name}</var>
 <arg>3</arg>
 <arg>12345678</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:42.754" level="INFO">${random_name} = 437</msg>
-<status status="PASS" starttime="20240801 11:11:42.753" endtime="20240801 11:11:42.754"/>
+<msg timestamp="20240805 10:29:44.034" level="INFO">${random_name} = 614</msg>
+<status status="PASS" starttime="20240805 10:29:44.034" endtime="20240805 10:29:44.034"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
+<arg>//input[@placeholder='Enter Site name']</arg>
+<arg>Site_${random_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:42.755" level="INFO">Typing text 'Payload_437' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:42.754" endtime="20240801 11:11:43.388"/>
+<msg timestamp="20240805 10:29:44.035" level="INFO">Typing text 'Site_614' into text field '//input[@placeholder='Enter Site name']'.</msg>
+<status status="PASS" starttime="20240805 10:29:44.035" endtime="20240805 10:29:44.630"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:42.753" endtime="20240801 11:11:43.388"/>
+<status status="PASS" starttime="20240805 10:29:44.033" endtime="20240805 10:29:44.630"/>
 </kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:43.389" level="INFO">${random_ID} = 17355</msg>
-<status status="PASS" starttime="20240801 11:11:43.389" endtime="20240801 11:11:43.389"/>
+<kw name="select site-type" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[contains(text(),'Please select an option')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240805 10:29:44.632" level="INFO">Clicking element '//div[contains(text(),'Please select an option')]'.</msg>
+<status status="PASS" starttime="20240805 10:29:44.631" endtime="20240805 10:29:44.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[normalize-space()='Agriculture']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240805 10:29:44.779" level="INFO">Clicking element '//button[normalize-space()='Agriculture']'.</msg>
+<status status="PASS" starttime="20240805 10:29:44.779" endtime="20240805 10:29:44.898"/>
+</kw>
+<status status="PASS" starttime="20240805 10:29:44.631" endtime="20240805 10:29:44.898"/>
+</kw>
+<kw name="enter site-location" library="resource">
+<arg>${location}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[contains(@placeholder,'Search for location')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240805 10:29:44.900" level="INFO">Clicking element '//input[contains(@placeholder,'Search for location')]'.</msg>
+<status status="PASS" starttime="20240805 10:29:44.900" endtime="20240805 10:29:45.013"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
+<arg>//input[@placeholder='Search for location']</arg>
+<arg>${location}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:43.391" level="INFO">Typing text '17355' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:43.390" endtime="20240801 11:11:43.651"/>
+<msg timestamp="20240805 10:29:45.014" level="INFO">Typing text 'India' into text field '//input[@placeholder='Search for location']'.</msg>
+<status status="PASS" starttime="20240805 10:29:45.014" endtime="20240805 10:29:45.163"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:43.388" endtime="20240801 11:11:43.651"/>
-</kw>
-<kw name="select payload type Multispectral Camera RedEgeMx" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:43.652" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:43.652" endtime="20240801 11:11:43.744"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240805 10:29:45.163" endtime="20240805 10:29:45.166"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='Multispectral Camera RedEgeMx']</arg>
+<arg>//button[@class='Button Button--active']//i[@alt='search']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:43.746" level="INFO">Clicking element '//button[normalize-space()='Multispectral Camera RedEgeMx']'.</msg>
-<status status="PASS" starttime="20240801 11:11:43.744" endtime="20240801 11:11:43.851"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:43.651" endtime="20240801 11:11:43.851"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:43.853" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:43.852" endtime="20240801 11:11:43.946"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:43.851" endtime="20240801 11:11:43.946"/>
+<msg timestamp="20240805 10:29:45.167" level="INFO">Clicking element '//button[@class='Button Button--active']//i[@alt='search']'.</msg>
+<status status="PASS" starttime="20240805 10:29:45.166" endtime="20240805 10:29:45.260"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
+<arg>//div[@class='Map']//div[1]//span[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:43.947" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:43.946" endtime="20240801 11:11:44.694"/>
+<msg timestamp="20240805 10:29:45.262" level="INFO">Clicking element '//div[@class='Map']//div[1]//span[1]'.</msg>
+<status status="PASS" starttime="20240805 10:29:45.260" endtime="20240805 10:29:45.639"/>
 </kw>
-<kw name="click on create button" library="resource">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>800</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240805 10:29:45.639" endtime="20240805 10:29:45.643"/>
+</kw>
+<status status="PASS" starttime="20240805 10:29:44.898" endtime="20240805 10:29:45.643"/>
+</kw>
+<kw name="Demarcate as point" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
+<arg>//i[@alt='circle']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:44.697" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:44.695" endtime="20240801 11:11:45.661"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:45.675" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:45.675" endtime="20240801 11:11:45.675"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:45.662" endtime="20240801 11:11:45.675"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:44.694" endtime="20240801 11:11:45.677"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:45.678" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:45.677" endtime="20240801 11:11:45.802"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:45.677" endtime="20240801 11:11:45.802"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:45.803" level="INFO">${random_name} = 438</msg>
-<status status="PASS" starttime="20240801 11:11:45.802" endtime="20240801 11:11:45.803"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:45.805" level="INFO">Typing text 'Payload_438' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:45.804" endtime="20240801 11:11:46.052"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:45.802" endtime="20240801 11:11:46.052"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:46.053" level="INFO">${random_ID} = 46461</msg>
-<status status="PASS" starttime="20240801 11:11:46.053" endtime="20240801 11:11:46.053"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:46.054" level="INFO">Typing text '46461' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:46.053" endtime="20240801 11:11:46.282"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:46.052" endtime="20240801 11:11:46.282"/>
-</kw>
-<kw name="select payload type Q10T 10x Zoom Video Camera" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:46.284" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:46.283" endtime="20240801 11:11:46.368"/>
+<msg timestamp="20240805 10:29:45.645" level="INFO">Clicking element '//i[@alt='circle']'.</msg>
+<status status="PASS" starttime="20240805 10:29:45.644" endtime="20240805 10:29:45.883"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='Q10T 10x Zoom Video Camera']</arg>
+<arg>//div[@class='Map']//div[2]//canvas[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:46.369" level="INFO">Clicking element '//button[normalize-space()='Q10T 10x Zoom Video Camera']'.</msg>
-<status status="PASS" starttime="20240801 11:11:46.368" endtime="20240801 11:11:46.476"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:46.282" endtime="20240801 11:11:46.476"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:46.478" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:46.477" endtime="20240801 11:11:46.579"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:46.476" endtime="20240801 11:11:46.579"/>
+<msg timestamp="20240805 10:29:45.884" level="INFO">Clicking element '//div[@class='Map']//div[2]//canvas[1]'.</msg>
+<status status="PASS" starttime="20240805 10:29:45.883" endtime="20240805 10:29:46.397"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
+<arg>//button[@type='button']//div[@class='Button__text'][normalize-space()='Save']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:46.580" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:46.580" endtime="20240801 11:11:47.670"/>
+<msg timestamp="20240805 10:29:46.400" level="INFO">Clicking element '//button[@type='button']//div[@class='Button__text'][normalize-space()='Save']'.</msg>
+<status status="PASS" starttime="20240805 10:29:46.397" endtime="20240805 10:29:46.548"/>
 </kw>
-<kw name="click on create button" library="resource">
+<status status="PASS" starttime="20240805 10:29:45.644" endtime="20240805 10:29:46.549"/>
+</kw>
+<kw name="save site" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
+<arg>//div[normalize-space()='Save']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:47.672" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:47.671" endtime="20240801 11:11:48.657"/>
+<msg timestamp="20240805 10:29:46.552" level="INFO">Clicking element '//div[normalize-space()='Save']'.</msg>
+<status status="PASS" starttime="20240805 10:29:46.550" endtime="20240805 10:29:46.737"/>
 </kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:48.665" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:48.665" endtime="20240801 11:11:48.666"/>
+<status status="PASS" starttime="20240805 10:29:46.550" endtime="20240805 10:29:46.738"/>
 </kw>
-<status status="PASS" starttime="20240801 11:11:48.658" endtime="20240801 11:11:48.666"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:47.671" endtime="20240801 11:11:48.666"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:48.667" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:48.666" endtime="20240801 11:11:48.781"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:48.666" endtime="20240801 11:11:48.781"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:48.782" level="INFO">${random_name} = 626</msg>
-<status status="PASS" starttime="20240801 11:11:48.782" endtime="20240801 11:11:48.782"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:48.783" level="INFO">Typing text 'Payload_626' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:48.782" endtime="20240801 11:11:49.048"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:48.781" endtime="20240801 11:11:49.048"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:49.049" level="INFO">${random_ID} = 23737</msg>
-<status status="PASS" starttime="20240801 11:11:49.049" endtime="20240801 11:11:49.049"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:49.050" level="INFO">Typing text '23737' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:49.049" endtime="20240801 11:11:49.244"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:49.048" endtime="20240801 11:11:49.244"/>
-</kw>
-<kw name="select payload type Q30T 30x Zoom Video Camera" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:49.246" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:49.245" endtime="20240801 11:11:49.313"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='Q30T 30x Zoom Video Camera']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:49.315" level="INFO">Clicking element '//button[normalize-space()='Q30T 30x Zoom Video Camera']'.</msg>
-<status status="PASS" starttime="20240801 11:11:49.315" endtime="20240801 11:11:49.397"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:49.244" endtime="20240801 11:11:49.397"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:49.399" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:49.398" endtime="20240801 11:11:49.501"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:49.397" endtime="20240801 11:11:49.502"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:49.503" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:49.502" endtime="20240801 11:11:50.038"/>
-</kw>
-<kw name="click on create button" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:50.040" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:50.039" endtime="20240801 11:11:50.987"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:50.993" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:50.993" endtime="20240801 11:11:50.994"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:50.987" endtime="20240801 11:11:50.994"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:50.038" endtime="20240801 11:11:50.994"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:50.994" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:50.994" endtime="20240801 11:11:51.151"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:50.994" endtime="20240801 11:11:51.151"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:51.152" level="INFO">${random_name} = 416</msg>
-<status status="PASS" starttime="20240801 11:11:51.152" endtime="20240801 11:11:51.152"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:51.154" level="INFO">Typing text 'Payload_416' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:51.152" endtime="20240801 11:11:51.482"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:51.151" endtime="20240801 11:11:51.482"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:51.483" level="INFO">${random_ID} = 44555</msg>
-<status status="PASS" starttime="20240801 11:11:51.482" endtime="20240801 11:11:51.483"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:51.484" level="INFO">Typing text '44555' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:51.483" endtime="20240801 11:11:51.813"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:51.482" endtime="20240801 11:11:51.813"/>
-</kw>
-<kw name="select payload type SEL20F28 E Mount" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:51.814" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:51.813" endtime="20240801 11:11:51.937"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='SEL20F28 E Mount']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:51.939" level="INFO">Clicking element '//button[normalize-space()='SEL20F28 E Mount']'.</msg>
-<status status="PASS" starttime="20240801 11:11:51.937" endtime="20240801 11:11:52.069"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:51.813" endtime="20240801 11:11:52.069"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:52.072" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:52.071" endtime="20240801 11:11:52.215"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:52.069" endtime="20240801 11:11:52.215"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:52.217" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:52.215" endtime="20240801 11:11:52.877"/>
-</kw>
-<kw name="click on create button" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:52.879" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:52.878" endtime="20240801 11:11:53.856"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:53.865" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:53.865" endtime="20240801 11:11:53.865"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:53.857" endtime="20240801 11:11:53.865"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:52.878" endtime="20240801 11:11:53.865"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:53.867" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:53.866" endtime="20240801 11:11:53.996"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:53.866" endtime="20240801 11:11:53.997"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:53.998" level="INFO">${random_name} = 484</msg>
-<status status="PASS" starttime="20240801 11:11:53.997" endtime="20240801 11:11:53.998"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:53.999" level="INFO">Typing text 'Payload_484' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:53.998" endtime="20240801 11:11:54.327"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:53.997" endtime="20240801 11:11:54.328"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:54.329" level="INFO">${random_ID} = 57821</msg>
-<status status="PASS" starttime="20240801 11:11:54.328" endtime="20240801 11:11:54.329"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:54.330" level="INFO">Typing text '57821' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:54.329" endtime="20240801 11:11:54.653"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:54.328" endtime="20240801 11:11:54.653"/>
-</kw>
-<kw name="select payload type Z10TIR Dual-Sensor Video Camera" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:54.654" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:54.654" endtime="20240801 11:11:54.807"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[contains(text(),'Z10TIR Dual-Sensor Video Camera')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:54.807" level="INFO">Clicking element '//button[contains(text(),'Z10TIR Dual-Sensor Video Camera')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:54.807" endtime="20240801 11:11:54.983"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:54.653" endtime="20240801 11:11:54.983"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:54.985" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:54.984" endtime="20240801 11:11:55.072"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:54.983" endtime="20240801 11:11:55.072"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:55.078" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:55.073" endtime="20240801 11:11:55.971"/>
-</kw>
-<kw name="click on create button" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:55.973" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:55.972" endtime="20240801 11:11:56.907"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:11:56.917" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:11:56.917" endtime="20240801 11:11:56.917"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:56.908" endtime="20240801 11:11:56.917"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:55.971" endtime="20240801 11:11:56.917"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:56.918" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:56.917" endtime="20240801 11:11:57.047"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:56.917" endtime="20240801 11:11:57.047"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:57.048" level="INFO">${random_name} = 618</msg>
-<status status="PASS" starttime="20240801 11:11:57.048" endtime="20240801 11:11:57.048"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:57.050" level="INFO">Typing text 'Payload_618' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:11:57.048" endtime="20240801 11:11:57.422"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:57.047" endtime="20240801 11:11:57.422"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:11:57.423" level="INFO">${random_ID} = 11355</msg>
-<status status="PASS" starttime="20240801 11:11:57.422" endtime="20240801 11:11:57.423"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:57.424" level="INFO">Typing text '11355' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:11:57.423" endtime="20240801 11:11:57.696"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:57.422" endtime="20240801 11:11:57.697"/>
-</kw>
-<kw name="select payload type ZIR35 IR Video Camera" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:57.699" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:11:57.698" endtime="20240801 11:11:57.844"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='ZIR35 IR Video Camera']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:57.845" level="INFO">Clicking element '//button[normalize-space()='ZIR35 IR Video Camera']'.</msg>
-<status status="PASS" starttime="20240801 11:11:57.844" endtime="20240801 11:11:57.999"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:57.697" endtime="20240801 11:11:57.999"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:58.002" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:11:57.999" endtime="20240801 11:11:58.151"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:57.999" endtime="20240801 11:11:58.151"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:58.152" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:11:58.151" endtime="20240801 11:11:59.068"/>
-</kw>
-<kw name="click on create button" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:11:59.069" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:11:59.068" endtime="20240801 11:12:00.053"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:12:00.060" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:12:00.060" endtime="20240801 11:12:00.060"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:00.054" endtime="20240801 11:12:00.061"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:59.068" endtime="20240801 11:12:00.061"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:00.062" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:12:00.062" endtime="20240801 11:12:00.206"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:00.061" endtime="20240801 11:12:00.206"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:12:00.207" level="INFO">${random_name} = 512</msg>
-<status status="PASS" starttime="20240801 11:12:00.207" endtime="20240801 11:12:00.207"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:00.209" level="INFO">Typing text 'Payload_512' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:12:00.208" endtime="20240801 11:12:00.539"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:00.206" endtime="20240801 11:12:00.539"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:12:00.540" level="INFO">${random_ID} = 74854</msg>
-<status status="PASS" starttime="20240801 11:12:00.540" endtime="20240801 11:12:00.540"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:00.542" level="INFO">Typing text '74854' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:12:00.540" endtime="20240801 11:12:00.859"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:00.539" endtime="20240801 11:12:00.860"/>
-</kw>
-<kw name="select payload type 24MP Image Camera with 16mm Lens" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:00.861" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:12:00.860" endtime="20240801 11:12:01.002"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='24MP Image Camera with 16mm Lens']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:01.003" level="INFO">Clicking element '//button[normalize-space()='24MP Image Camera with 16mm Lens']'.</msg>
-<status status="PASS" starttime="20240801 11:12:01.002" endtime="20240801 11:12:01.156"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:00.860" endtime="20240801 11:12:01.156"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:01.158" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:12:01.157" endtime="20240801 11:12:01.308"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:01.157" endtime="20240801 11:12:01.308"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//i[@class='Icon Icon-close']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:01.309" level="INFO">Clicking element '//i[@class='Icon Icon-close']'.</msg>
-<status status="PASS" starttime="20240801 11:12:01.308" endtime="20240801 11:12:02.091"/>
-</kw>
-<kw name="click on create button" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[contains(text(),'create')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:02.092" level="INFO">Clicking element '//div[contains(text(),'create')]'.</msg>
-<status status="PASS" starttime="20240801 11:12:02.091" endtime="20240801 11:12:03.067"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<arg>//button[@title='Not Right Now']</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<kw name="//button[@title='Not Right Now']">
-<msg timestamp="20240801 11:12:03.076" level="FAIL">No keyword with name '//button[@title='Not Right Now']' found.</msg>
-<status status="FAIL" starttime="20240801 11:12:03.076" endtime="20240801 11:12:03.076"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:03.068" endtime="20240801 11:12:03.076"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:02.091" endtime="20240801 11:12:03.076"/>
-</kw>
-<kw name="click on new payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[normalize-space()='new payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:03.078" level="INFO">Clicking element '//span[normalize-space()='new payload']'.</msg>
-<status status="PASS" starttime="20240801 11:12:03.077" endtime="20240801 11:12:03.210"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:03.077" endtime="20240801 11:12:03.210"/>
-</kw>
-<kw name="Enter payload name" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_name}</var>
-<arg>3</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:12:03.211" level="INFO">${random_name} = 522</msg>
-<status status="PASS" starttime="20240801 11:12:03.211" endtime="20240801 11:12:03.211"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload name']</arg>
-<arg>Payload_${random_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:03.212" level="INFO">Typing text 'Payload_522' into text field '//input[@placeholder='Enter payload name']'.</msg>
-<status status="PASS" starttime="20240801 11:12:03.211" endtime="20240801 11:12:03.536"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:03.210" endtime="20240801 11:12:03.536"/>
-</kw>
-<kw name="Enter payload ID" library="resource">
-<kw name="Generate Random String" library="String">
-<var>${random_ID}</var>
-<arg>5</arg>
-<arg>12345678</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20240801 11:12:03.536" level="INFO">${random_ID} = 25115</msg>
-<status status="PASS" starttime="20240801 11:12:03.536" endtime="20240801 11:12:03.537"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@placeholder='Enter payload ID']</arg>
-<arg>${random_ID}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:03.537" level="INFO">Typing text '25115' into text field '//input[@placeholder='Enter payload ID']'.</msg>
-<status status="PASS" starttime="20240801 11:12:03.537" endtime="20240801 11:12:03.837"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:03.536" endtime="20240801 11:12:03.837"/>
-</kw>
-<kw name="Select payload type 24MP Image Camera with 20mm Lens" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@class='SelectionList__header-text']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:03.839" level="INFO">Clicking element '//div[@class='SelectionList__header-text']'.</msg>
-<status status="PASS" starttime="20240801 11:12:03.839" endtime="20240801 11:12:03.984"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[normalize-space()='24MP Image Camera with 20mm Lens']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:03.985" level="INFO">Clicking element '//button[normalize-space()='24MP Image Camera with 20mm Lens']'.</msg>
-<status status="PASS" starttime="20240801 11:12:03.984" endtime="20240801 11:12:04.129"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:03.838" endtime="20240801 11:12:04.129"/>
-</kw>
-<kw name="save payload" library="resource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[normalize-space()='Save Payload']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240801 11:12:04.131" level="INFO">Clicking element '//div[normalize-space()='Save Payload']'.</msg>
-<status status="PASS" starttime="20240801 11:12:04.130" endtime="20240801 11:12:04.266"/>
-</kw>
-<status status="PASS" starttime="20240801 11:12:04.130" endtime="20240801 11:12:04.266"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240801 11:12:04.266" endtime="20240801 11:12:06.614"/>
-</kw>
-<status status="PASS" starttime="20240801 11:11:19.880" endtime="20240801 11:12:06.614"/>
+<status status="PASS" starttime="20240805 10:29:29.641" endtime="20240805 10:29:46.738"/>
 </kw>
 <tag>REGRESSION</tag>
-<status status="PASS" starttime="20240801 11:11:19.878" endtime="20240801 11:12:06.615"/>
+<status status="PASS" starttime="20240805 10:29:29.640" endtime="20240805 10:29:46.742"/>
 </test>
-<doc>This test case is used to create payloads</doc>
-<status status="PASS" starttime="20240801 11:11:19.277" endtime="20240801 11:12:06.623"/>
+<doc>This suite is used to create sites</doc>
+<status status="PASS" starttime="20240805 10:29:29.060" endtime="20240805 10:29:46.744"/>
 </suite>
-<status status="PASS" starttime="20240801 11:11:19.273" endtime="20240801 11:12:06.628"/>
+<status status="PASS" starttime="20240805 10:29:29.058" endtime="20240805 10:29:46.748"/>
 </suite>
-<status status="PASS" starttime="20240801 11:11:19.270" endtime="20240801 11:12:06.631"/>
+<status status="PASS" starttime="20240805 10:29:29.055" endtime="20240805 10:29:46.752"/>
 </suite>
-<status status="PASS" starttime="20240801 11:11:19.265" endtime="20240801 11:12:06.634"/>
-</suite>
-<status status="PASS" starttime="20240801 11:11:19.224" endtime="20240801 11:12:06.636"/>
+<status status="PASS" starttime="20240805 10:29:29.013" endtime="20240805 10:29:46.754"/>
 </suite>
 <statistics>
 <total>
@@ -848,9 +215,8 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="SkYDECK Stage QA Automation-master">SkYDECK Stage QA Automation-master</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="STAGING">SkYDECK Stage QA Automation-master.STAGING</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="FLEETS">SkYDECK Stage QA Automation-master.STAGING.FLEETS</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Payloads">SkYDECK Stage QA Automation-master.STAGING.FLEETS.Payloads</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Create Paylaod">SkYDECK Stage QA Automation-master.STAGING.FLEETS.Payloads.Create Paylaod</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="SITES">SkYDECK Stage QA Automation-master.STAGING.SITES</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Create Site">SkYDECK Stage QA Automation-master.STAGING.SITES.Create Site</stat>
 </suite>
 </statistics>
 <errors>
