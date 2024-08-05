@@ -59,6 +59,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\STAGING\SITES\Test_data\create_sites.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
